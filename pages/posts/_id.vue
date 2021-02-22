@@ -3,7 +3,6 @@
     <h1>記事個別ページ{{ post.id }}</h1>
     <h2>{{ post.title }}</h2>
     <p>{{ post.body}}</p>
-    <p>{{title}}</p>
   </div>
 </template>
 
@@ -11,25 +10,15 @@
 import axios from 'axios'
 
 export default {
-  asyncData(){
-    return{
-      title: '個別ページ'
-    }
-  },
-  head(){
+  async asyncData({ params }) {
+  const { data } = await axios.get('https://jsonplaceholder.typicode.com/posts/' + params.id)
+  return { post: data }
+},
+head(){
     return {
-      title: this.title
+      title: this.post.title
     }
   },
-  data(){
-    return {
-      post: {},
-    }
-  },
-  mounted(){
-    axios.get('https://jsonplaceholder.typicode.com/posts/' + this.$route.params.id)
-          .then(response => this.post = response.data);
-  }
 }
 </script>
 
