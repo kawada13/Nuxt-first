@@ -18,6 +18,7 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex'
 
 export default {
   async asyncData({$axios}) {
