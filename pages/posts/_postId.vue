@@ -11,7 +11,7 @@ import axios from 'axios'
 
 export default {
   async asyncData({ params }) {
-  const { data } = await axios.get('https://jsonplaceholder.typicode.com/posts/' + params.id)
+  const { data } = await axios.get('https://jsonplaceholder.typicode.com/posts/' + params.postId)
   return { post: data }
 },
 head(){
