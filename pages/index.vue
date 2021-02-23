@@ -1,6 +1,7 @@
 <template>
   <div>
-    <section class="container">
+    <h1>Index page</h1>
+    <!-- <section class="container">
       <div>
         <h3>Nuxt.jsのタグがつけられた投稿一覧</h3>
         <ul>
@@ -19,7 +20,7 @@
           </li>
         </ul>
       </div>
-    </section>
+    </section> -->
   </div>
 </template>
 
