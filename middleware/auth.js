@@ -2,8 +2,6 @@ import Cookie from 'universal-cookie'
 
 
 export default ({ req, route, redirect }) => {
-  console.log(route.path)
-  console.log(req)
   if(['/'].includes(route.path)) {
     return
   }
