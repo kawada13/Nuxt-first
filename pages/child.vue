@@ -9,7 +9,3 @@ export default {
   layout: 'single'
 }
 </script>
-
-<style>
-
-</style>
